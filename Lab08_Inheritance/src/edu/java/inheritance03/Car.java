@@ -13,6 +13,7 @@ public class Car {
 	
 	public void drive() {
 		System.out.println("자동차 운행 : 현재 speed = "+ speed);
+		System.out.println("aa");
 	}
 
 	public int getSpeed() {
