@@ -7,14 +7,10 @@ public class Practice {
 	
 	public static void main(String[] args) {
 		
-
-		Scanner scan= new Scanner(System.in);
+		String text= "안녕 나는 개구리야";
 		
-		int N= scan.nextInt();
-		
-		for(int i=1; i<=N; i++) {
-			System.out.println(i);
-		}
+		String result=text.replaceAll("[ㄱ-ㅎ가-힣]", "개굴");
+		System.out.println(result);
 	}
 	
 	

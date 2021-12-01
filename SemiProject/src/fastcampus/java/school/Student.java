@@ -6,5 +6,4 @@ public class Student {
 	private String studentName;
 	private Subject majorSubject;
 	
-	private ArrayList<>
 }
