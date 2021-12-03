@@ -2,12 +2,8 @@ package edu.java.contact.ver02;
 
 import java.util.Scanner;
 
-<<<<<<< HEAD
 import edu.java.contact.ver02.Contact;
-=======
-import edu.java.contact.controller.ContactDaoImpl;
-import edu.java.contact.model.Contact;
->>>>>>> fad2a5a969df4d5385e60b29023d879258b6abd1
+import edu.java.contact.ver02.ContactDaoImpl;
 
 // MVC 아키텍쳐에서 View에 해당하는 클래스. UI를 담당.
 public class ContactMain02 {
@@ -17,10 +13,6 @@ public class ContactMain02 {
 
 	public static void main(String[] args) {
 
-<<<<<<< HEAD
-		
-=======
->>>>>>> fad2a5a969df4d5385e60b29023d879258b6abd1
 		System.out.println("회원 관리 프로그램");
 		boolean run = true;
 		
@@ -80,10 +72,6 @@ public class ContactMain02 {
 		String email=scan.nextLine();
 		System.out.println("회원의 핸드폰번호를 입력해주세요.");
 		String phone=scan.nextLine();
-<<<<<<< HEAD
-		
-=======
->>>>>>> fad2a5a969df4d5385e60b29023d879258b6abd1
 		Contact con=new Contact();
 		
 		con.setEmail(email);
