@@ -1,6 +1,6 @@
 package edu.java.contact.ver02;
 
-import edu.java.contact.ver02.Contact;
+import edu.java.contact.model.Contact;
 import edu.java.contact.ver02.ContactDao;
 
 public class ContactDaoImpl implements ContactDao{

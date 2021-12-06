@@ -1,14 +1,14 @@
-package edu.java.contact.ver03;
+package edu.java.contact.ver04;
 
 import java.util.List;
 import java.util.Scanner;
 
-import edu.java.contact.ver03.ContactDaoImpl;
+import edu.java.contact.ver04.ContactDaoImpl;
 import edu.java.contact.menu.ContactMenu;
 import edu.java.contact.model.Contact;
 
 // MVC 아키텍쳐에서 View에 해당하는 클래스. UI를 담당.
-public class ContactMain03 {
+public class ContactMain04 {
 
 	public static Scanner scan = new Scanner(System.in);
 	public static ContactDao dao = ContactDaoImpl.getInstance();
@@ -101,7 +101,6 @@ public class ContactMain03 {
 		for (Contact con : list) {
 			System.out.println(con);
 		}
-		System.out.println("-----------");
 	}
 
 	private static void select() {

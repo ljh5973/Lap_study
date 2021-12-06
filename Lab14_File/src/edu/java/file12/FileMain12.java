@@ -94,7 +94,7 @@ public class FileMain12 {
 		// 디렉토리(폴더) 생성과 삭제
 		File newFolder = new File("data", "test123");
 		if(!newFolder.exists()) {	//디렉토리가 존재하지 않으면
-			boolean result=newFolder.mkdir();
+			newFolder.mkdir();
 			System.out.println("디렉토리 생성 성공");
 			
 		}else {
