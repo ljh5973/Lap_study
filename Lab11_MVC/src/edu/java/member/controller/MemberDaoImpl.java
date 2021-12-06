@@ -30,7 +30,6 @@ public class MemberDaoImpl implements MemberDao {
 
 	
 	
-	@Override
 	public int insert(Member m) {
 		int result=0;
 	
@@ -43,7 +42,6 @@ public class MemberDaoImpl implements MemberDao {
 		
 	}
 
-	@Override
 	public Member[] select() {
 		
 		Member[] arr=new Member[count];
@@ -57,7 +55,6 @@ public class MemberDaoImpl implements MemberDao {
 		return arr;
 	}
 
-	@Override
 	public Member select(int index) {
 		Member m=null;
 		if(index>=0 && index<MAX_LENGTH) {
@@ -66,7 +63,6 @@ public class MemberDaoImpl implements MemberDao {
 		return m;
 	}
 
-	@Override
 	public int update(int index, String password) {
 		
 		int result=0;
