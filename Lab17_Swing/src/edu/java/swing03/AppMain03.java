@@ -16,6 +16,10 @@ public class AppMain03 {
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField result;
+	private JButton btnPlus;
+	private JButton btnMinus;
+	private JButton btnX;
+	private JButton btnDivision;
 
 	/**
 	 * Launch the application.
@@ -69,13 +73,11 @@ public class AppMain03 {
 		frame.getContentPane().add(textField_2);
 		textField_2.setColumns(10);
 		
-		double num1=Double.parseDouble(textField_1.getText());
-		double num2=Double.parseDouble(textField_2.getText());
 		
 		
-		JButton btnNewButton = new JButton("+");
+		btnPlus = new JButton("+");
 		
-			btnNewButton.addActionListener(new ActionListener() {
+			btnPlus.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					
 					try {
@@ -88,13 +90,14 @@ public class AppMain03 {
 					}
 				}
 			});
-			btnNewButton.setBounds(12, 225, 97, 23);
-			frame.getContentPane().add(btnNewButton);
+			btnPlus.setBounds(12, 225, 97, 23);
+			frame.getContentPane().add(btnPlus);
 			
-			JButton btnNewButton_1 = new JButton("-");
-			btnNewButton_1.addActionListener(new ActionListener() {
+			btnMinus = new JButton("-");
+			btnMinus.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-						
+						System.out.println(e.getActionCommand());
+						System.out.println(e.getSource());
 					
 					try {
 						
@@ -106,13 +109,15 @@ public class AppMain03 {
 					}
 				}
 			});
-			btnNewButton_1.setBounds(139, 225, 109, 23);
-			frame.getContentPane().add(btnNewButton_1);
+			btnMinus.setBounds(139, 225, 109, 23);
+			frame.getContentPane().add(btnMinus);
 			
-			JButton btnX = new JButton("X");
+			btnX = new JButton("X");
 			btnX.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					
+					// 파라미터 ActionEvent e: 이벤트가 발생시킨 객체에 대한 정보를 가지고 있는 클래스.
+					// actionPerformed 메서드에 전달된 argument e 를 메서드에 전달
+					performCaculation(e);
 					try {
 						result.setText(Double.toString(Double.parseDouble(textField_1.getText())*Double.parseDouble(textField_2.getText())));
 						
@@ -122,12 +127,14 @@ public class AppMain03 {
 						textField_2.setText("");
 					}
 				}
+
+	
 			});
 			btnX.setBounds(278, 225, 97, 23);
 			frame.getContentPane().add(btnX);
 			
-			JButton btnNewButton_3 = new JButton("/");
-			btnNewButton_3.addActionListener(new ActionListener() {
+			btnDivision = new JButton("/");
+			btnDivision.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					
 					try {
@@ -141,12 +148,39 @@ public class AppMain03 {
 				}
 			});
 			
-			btnNewButton_3.setBounds(407, 225, 97, 23);
-			frame.getContentPane().add(btnNewButton_3);
+			btnDivision.setBounds(407, 225, 97, 23);
+			frame.getContentPane().add(btnDivision);
 		result = new JTextField();
 		result.setBounds(12, 268, 492, 79);
 		frame.getContentPane().add(result);
 		result.setColumns(10);
+		
+	}
+	// 바깥 클래스 (outer class, enclosing class)에서 정의한 메서드는 inner class에서 사용 가능!
+	private void performCaculation(ActionEvent e) {
+		
+		try {
+			// JTextField에 있는 문자열을 읽어서 숫자로 변환
+			double x = Double.parseDouble(textField_1.getText());
+			double y = Double.parseDouble(textField_2.getText());
+			// 이벤트가 발생한 버튼에 따라서 서로 다른 계산을 수행하고 결과를 문자열로 작성
+			Object source=e.getSource();
+			String resultMsg="";
+			if(source== btnX) {
+				resultMsg= x + "x" +y +"y" + "="+ (x*y);
+			}else if(source == btnDivision) {
+				resultMsg= x + "/" +y +"y" + "="+ (x/y);
+			}
+		} catch (Exception e2) {
+			result.setText("숫자를 입력해주세요 . " );
+		}
+		
+		
+		// 결과 메시지를 JTextField에 출력
+		
+		
+		
+		
 	}
 
 }
