@@ -5,7 +5,6 @@ import java.util.List;
 
 import static edu.java.contact.fileutil.ContactFileUtill.*;	// 모든 static 멤버(변수 ,메서드)를 import
 
-import edu.java.contact.fileutil.ContactFileUtill;
 import edu.java.contact.model.Contact;
 
 public class ContactDaoImpl implements ContactDao {
@@ -86,6 +85,7 @@ public class ContactDaoImpl implements ContactDao {
 		if (index >= 0 && con.size() > index) {
 			con.remove(index);
 			// TODO: 파일에 변경된 ArrayList 를 씀.
+			writeDataToFile(con, dataFile);
 			result = 1;
 		}
 

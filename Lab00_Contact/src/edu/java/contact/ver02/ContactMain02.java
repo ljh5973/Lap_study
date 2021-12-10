@@ -2,14 +2,9 @@ package edu.java.contact.ver02;
 
 import java.util.Scanner;
 
-<<<<<<< HEAD
-import edu.java.contact.controller.ContactDaoImpl;
 import edu.java.contact.menu.ContactMenu;
 import edu.java.contact.model.Contact;
-=======
-import edu.java.contact.ver02.Contact;
 import edu.java.contact.ver02.ContactDaoImpl;
->>>>>>> 6ba44a3796e3a6e34474e0de01946f26af45e344
 
 // MVC 아키텍쳐에서 View에 해당하는 클래스. UI를 담당.
 public class ContactMain02 {
