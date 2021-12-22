@@ -61,6 +61,7 @@ public class AppMain11 {
 				{3, "초콜릿", 2_000, "식료품",50}
 		};
 		
+		
 		// 데이터와 컬럼 이름을 가지고 DefaultTableModel의 객체를 생성
 		model= new DefaultTableModel(data, colNames);
 		
