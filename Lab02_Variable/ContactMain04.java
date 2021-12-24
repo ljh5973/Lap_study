@@ -13,7 +13,7 @@ public class ContactMain04 {
 	public static ContactDao dao = ContactDaoImpl.getInstance();
 
 	public static void main(String[] args) {
-		
+		asdfdsafasf
 
 		System.out.println("*** 회원 관리 프로그램 ver 0.4 ***");
 		boolean run = true;
